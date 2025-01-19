@@ -10,11 +10,8 @@
 # Table of Contents
 - [Overview](#overview)
 - [Abstract](#abstract)
-- [Key Features](#key-features)
-- [Results](#results)
 - [SegAtlas: Object Segmentation Quality Evaluation Tool](#segatlas-object-segmentation-quality-evaluation-tool)
 - [Citation](#citation)
-- [Acknowledgments](#acknowledgments)
 - [License](#license)
 - [Contact](#contact)
 
@@ -41,45 +38,6 @@ Existing segmentation quality evaluation measures often fail to adequately asses
 - Maintaining the shape solidity of the boundary bands.
 
 We also introduce **S2FB Average Precision (S2FB AP)**, an extension of S2FB IoU for instance segmentation tasks and validate its performance on various datasets.
-
----
-
-## Key Features
-
-1. **Novel Evaluation Metric**:
-   - Integrates both the boundary accuracy and band shape consistency into the object-centric segmentation quality evaluation.
-   - Addresses limitations of traditional metrics like Mask IoU and Boundary IoU.
-
-2. **Synthetic Data Experiments**:
-   - Generated synthetic segmentation results based on the Berkeley Segmentation Dataset (BSD).
-   - Meta-Measure methodology used to validate metric effectiveness.
-
-3. **Applications in Instance Segmentation**:
-   - Introduced S2FB AP as an upgrade to existing evaluation protocols.
-   - Tested S2FB AP on the COCO dataset with state-of-the-art models (Mask R-CNN, BMask R-CNN, PointRend, SAM).
-   
----
-
-## Results
-
-### Experiments Results on the Berkley Segmentation Dataset
-
-| Metric       | Mis-ranking Pairs |
-|--------------|-------------------|
-| Mask IoU     | 42                |
-| Boundary IoU | 76                |
-| MQ           | 176               |
-| FB IoU       | 23                |
-| **S2FB IoU** | **21**            |
-
-### Application Results on COCO Dataset (Mask R-CNN R-101)
-
-| Metric       | AP | APS   | APM   | APL   |
-|--------------|-------|-------|-------|-------|
-| Mask AP      | 53.4  | 48.4  | 55.2  | 59.8  |
-| Boundary AP  | 38.0  | 48.4  | 48.5  | 25.1  |
-| FB AP        | 51.0  | 48.4  | 54.4  | 54.2  |
-| **S2FB AP**  | **44.6** | 48.2 | 49.4 | **41.1** |
 
 ---
 
@@ -125,16 +83,6 @@ If you find **S2FB IoU** or **SegAtlas** helpful in your research or wish to ref
   series = {MMAsia '24}
 }
 ```
-
----
-
-## Acknowledgments
-
-This work was supported by:
-- National Natural Science Foundation of China (No. 62472135).
-- Zhejiang Provincial Natural Science Foundation of China (No. LZ23F020006).
-- Key Research Project of Zhejiang Province (No. 2024C01212).
-- Sino-France Joint Laboratory for Digital Media Forensics of Zhejiang Province.
 
 ---
 
